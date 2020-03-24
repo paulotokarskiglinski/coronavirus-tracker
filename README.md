@@ -7,5 +7,3 @@ Este aplicativo monitora o número de casos confirmados, mortes e pacientes recu
 ![Screenshot](https://github.com/paulotokarskiglinski/coronavirus-tracker/blob/master/src/screenshot.png)
 
 **Fonte dos dados:** https://github.com/CSSEGISandData/COVID-19
-
-Este projeto foi desenvolvido utilizando Angular 9
