@@ -18,7 +18,7 @@ const server = function(req, res) {
   if (contentTypes[contentType]){
     const filename = req.url.split('/').pop();
 
-    fs.readFile('/' + (req.url.split('/')[1] === 'assets' ? 'assets/' : '') + filename, function(err, content) {
+    fs.readFile('dist/coronavirus-tracker/' + (req.url.split('/')[1] === 'assets' ? 'assets/' : '') + filename, function(err, content) {
       if (err) {
         throw new Error(err);
       } else {
@@ -28,7 +28,7 @@ const server = function(req, res) {
       }
     });
   } else {
-    fs.readFile('/index.html', function(err, html) {
+    fs.readFile('dist/coronavirus-tracker/index.html', function(err, html) {
       if (err) {
         throw new Error(err);
       } else {
