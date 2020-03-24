@@ -21,7 +21,7 @@ export class TrackerService {
   }
 
   public getBrasil(): Observable<any> {
-    return this.http.get(this.urlApi + 'locations/35').pipe(
+    return this.http.get(this.urlApi + 'locations?country_code=BR&timelines=1').pipe(
       map((res: any[]) => {
         return res;
       })

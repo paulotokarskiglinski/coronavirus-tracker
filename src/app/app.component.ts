@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
   public world: any = {};
   public brasil: any = {};
   public isLoading: boolean = true;
-  public title: string = '🦠 Coronavirus Tracker';
 
   public lineChartLegend = true;
   public lineChartType = 'line';
@@ -72,25 +71,25 @@ export class AppComponent implements OnInit {
 
         this.trackerService.getBrasil()
         .subscribe((brasil: any) => {
-          this.brasil = brasil.location;
+          this.brasil = brasil;
 
-          for (const date in this.brasil.timelines.confirmed.timeline) {
-            if (this.brasil.timelines.confirmed.timeline.hasOwnProperty(date)) {
-              this.lineChartData[0].data.push(this.brasil.timelines.confirmed.timeline[date]);
+          for (const date in this.brasil.locations[0].timelines.confirmed.timeline) {
+            if (this.brasil.locations[0].timelines.confirmed.timeline.hasOwnProperty(date)) {
+              this.lineChartData[0].data.push(this.brasil.locations[0].timelines.confirmed.timeline[date]);
 
               this.lineChartLabels.push(date);
             }
           }
 
-          for (const date in this.brasil.timelines.deaths.timeline) {
-            if (this.brasil.timelines.deaths.timeline.hasOwnProperty(date)) {
-              this.lineChartData[1].data.push(this.brasil.timelines.deaths.timeline[date]);
+          for (const date in this.brasil.locations[0].timelines.deaths.timeline) {
+            if (this.brasil.locations[0].timelines.deaths.timeline.hasOwnProperty(date)) {
+              this.lineChartData[1].data.push(this.brasil.locations[0].timelines.deaths.timeline[date]);
             }
           }
 
-          for (const date in this.brasil.timelines.recovered.timeline) {
-            if (this.brasil.timelines.recovered.timeline.hasOwnProperty(date)) {
-              this.lineChartData[2].data.push(this.brasil.timelines.recovered.timeline[date]);
+          for (const date in this.brasil.locations[0].timelines.recovered.timeline) {
+            if (this.brasil.locations[0].timelines.recovered.timeline.hasOwnProperty(date)) {
+              this.lineChartData[2].data.push(this.brasil.locations[0].timelines.recovered.timeline[date]);
             }
           }
 

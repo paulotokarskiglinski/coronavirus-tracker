@@ -30,7 +30,7 @@
 
   <div class="notification is-warning">
     <p class="is-size-7">
-      <b>Última atualização do Brasil: </b> {{ brasil?.last_updated | date:'dd/mm/y, hh:mm' }} 
+      <b>Última atualização do Brasil: </b> {{ brasil?.locations[0].last_updated | date:'dd/MM/yyyy hh:mm:ss' }} 
     </p>
     <p class="is-size-7">
       <b>Fonte: </b><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" title="Abrir link em nova aba">2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</a>
