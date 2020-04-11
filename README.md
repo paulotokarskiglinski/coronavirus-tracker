@@ -1,6 +1,6 @@
 # Coronavirus Tracker
 
-Este aplicativo monitora o número de casos confirmados, mortes e pacientes recuperados do coronavírus (COVID-19) no mundo e especialmente no Brasil.
+Este aplicativo monitora o número de casos confirmados e mortes por coronavírus (COVID-19) no mundo e especificamente no Brasil.
 
 **Versão online:** https://coronavirus-covid-tracker.herokuapp.com/
 
