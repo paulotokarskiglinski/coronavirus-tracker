@@ -18,8 +18,7 @@ export class AppComponent implements OnInit {
   public lineChartType = 'line';
   public lineChartData: ChartDataSets[] = [
     { data: [0], label: 'Confirmados' },
-    { data: [0], label: 'Mortes' },
-    { data: [0], label: 'Recuperados' }
+    { data: [0], label: 'Mortes' }
   ];
   public lineChartLabels: Label[] = [];
   public lineChartOptions: (ChartOptions) = {
@@ -52,12 +51,6 @@ export class AppComponent implements OnInit {
       borderColor: 'rgba(231, 76, 60,1.0)',
       pointBackgroundColor: 'rgba(231, 76, 60,1.0)',
       pointHoverBorderColor: 'rgba(231, 76, 60,1.0)'
-    },
-    {
-      backgroundColor: 'rgba(46, 204, 113,0)',
-      borderColor: 'rgba(46, 204, 113,1.0)',
-      pointBackgroundColor: 'rgba(46, 204, 113,1.0)',
-      pointHoverBorderColor: 'rgba(46, 204, 113,1.0)'
     }
   ];
 
@@ -84,12 +77,6 @@ export class AppComponent implements OnInit {
           for (const date in this.brasil.locations[0].timelines.deaths.timeline) {
             if (this.brasil.locations[0].timelines.deaths.timeline.hasOwnProperty(date)) {
               this.lineChartData[1].data.push(this.brasil.locations[0].timelines.deaths.timeline[date]);
-            }
-          }
-
-          for (const date in this.brasil.locations[0].timelines.recovered.timeline) {
-            if (this.brasil.locations[0].timelines.recovered.timeline.hasOwnProperty(date)) {
-              this.lineChartData[2].data.push(this.brasil.locations[0].timelines.recovered.timeline[date]);
             }
           }
 

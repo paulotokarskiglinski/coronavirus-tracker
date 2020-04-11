@@ -79,26 +79,6 @@
       </div>
     </div>
 
-    <div class="column">
-      <div class="container">
-        <div class="card">
-          <div class="card-content">
-            <p class="title is-4 has-text-success">
-              Recuperados
-            </p>
-            <p role="image" aria-label="Brasil">
-              <span style="font-size: 20px; margin-right: 10px" class="ml 3">🇧🇷</span> 
-              <span style="font-size: 16px">{{ brasil?.latest?.recovered | number }} casos ({{ getPercent(brasil?.latest?.confirmed, brasil?.latest?.recovered) | number:'1.0-2' }}%)</span>
-            </p>
-            <p role="image" aria-label="Mundo">
-              <span style="font-size: 20px; margin-right: 10px" class="ml 3">🌎</span> 
-              <span style="font-size: 16px">{{ world?.latest?.recovered | number }} casos ({{ getPercent(world?.latest?.confirmed, world?.latest?.recovered) | number:'1.0-2' }}%)</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <div class="columns">
