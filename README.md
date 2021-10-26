@@ -4,6 +4,4 @@ Este aplicativo monitora o número de casos confirmados e mortes por coronavíru
 
 **Versão online:** https://coronavirus-covid-tracker.herokuapp.com/
 
-![Screenshot](https://github.com/paulotokarskiglinski/coronavirus-tracker/blob/master/src/screenshot.png)
-
 **Fonte dos dados:** https://github.com/CSSEGISandData/COVID-19
